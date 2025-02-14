@@ -1,0 +1,38 @@
+function doGet() {
+    const ss = SpreadsheetApp.openById("SHEET ID");
+    const sheet = ss.getSheetByName("Votes"); // ชื่อชีทที่เก็บโหวต
+    const data = sheet.getDataRange().getValues(); // ดึงข้อมูลทั้งหมด
+
+    let results = {}; // เก็บผลโหวต
+
+    // อ่านข้อมูลจาก Sheet
+    for (let i = 1; i < data.length; i++) { // ข้ามหัวตาราง
+        let category = data[i][1]; // หมวดหมู่ (คอลัมน์ที่ 2)
+        let nominee = data[i][2]; // ชื่อผู้เข้าชิง (คอลัมน์ที่ 3)
+
+        if (!results[category]) {
+            results[category] = {}; // ถ้ายังไม่มีหมวดหมู่ ให้สร้างใหม่
+        }
+
+        if (!results[category][nominee]) {
+            results[category][nominee] = 0; // เริ่มต้นนับคะแนน
+        }
+
+        results[category][nominee]++; // บวกคะแนนให้ผู้เข้าชิง
+    }
+
+    // แปลงผลลัพธ์ให้ส่งออกไปในรูปแบบ JSON
+    let finalResults = {};
+    for (let category in results) {
+        // แปลง Object เป็น Array แล้วเรียงจากคะแนนมากไปน้อย
+        let sortedNominees = Object.entries(results[category])
+            .map(([nominee, votes]) => ({ nominee, votes }))
+            .sort((a, b) => b.votes - a.votes)
+            .slice(0, 10); // เอาแค่ 3 อันดับแรก
+
+        finalResults[category] = sortedNominees;
+    }
+
+    return ContentService.createTextOutput(JSON.stringify(finalResults))
+        .setMimeType(ContentService.MimeType.JSON);
+}
