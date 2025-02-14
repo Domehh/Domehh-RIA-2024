@@ -1,0 +1,42 @@
+function doPost(e) {
+  var params = e.parameter;
+  var action = params.action;
+  var sheet = SpreadsheetApp.getActiveSpreadsheet();
+  
+  if (action === "login") {
+    return checkStudentLogin(params.studentId);
+  } else if (action === "vote") {
+    return recordVote(params.studentId, params.category, params.nominee);
+  }
+}
+
+function checkStudentLogin(studentId) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Students");
+  var data = sheet.getDataRange().getValues();
+  
+  for (var i = 1; i < data.length; i++) {
+    if (data[i][0] == studentId) {
+      return ContentService.createTextOutput("success");
+    }
+  }
+  return ContentService.createTextOutput("not_found");
+}
+
+function recordVote(studentId, category, nominee) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Votes");
+  var data = sheet.getDataRange().getValues();
+  var count = 0;
+
+  for (var i = 1; i < data.length; i++) {
+    if (data[i][0] == studentId && data[i][1] == category) {
+      count++;
+    }
+  }
+
+  if (count >= 2) {
+    return ContentService.createTextOutput("already_voted");
+  } else {
+    sheet.appendRow([studentId, category, nominee]);
+    return ContentService.createTextOutput("vote_success");
+  }
+}
