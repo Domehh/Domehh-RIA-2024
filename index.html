@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajadamri Icons Awards 2024 (RIA2024)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* แอนิเมชัน Popup */
+        .fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-blue-500 to-yellow-400 min-h-screen flex justify-center items-center">
+
+    <!-- หน้า Login -->
+    <div id="loginPage" class="w-full max-w-md p-6 bg-white rounded-lg shadow-lg text-center">
+        <h2 class="text-2xl font-bold text-blue-600 mb-4">เข้าสู่ระบบ</h2>
+        <input type="text" id="studentId" class="w-full p-3 border rounded mb-3" placeholder="รหัสประจำตัวนักเรียน-เลขครู">
+        <button onclick="login()" class="w-full bg-blue-600 hover:bg-blue-700 text-white p-3 rounded">ลงชื่อเข้าใช้</button>
+    </div>
+
+    <!-- Popup โหลดข้อมูล -->
+    <div id="loadingPopup" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center fade-in">
+            <p class="text-lg font-semibold">กำลังตรวจสอบข้อมูล...</p>
+        </div>
+    </div>
+
+    <!-- หน้าโหวต -->
+    <div id="votePage" class="hidden w-full p-6">
+        <h2 class="text-3xl font-bold text-center text-white mb-5">Rajadamri Icons Awards 2024 (RIA2024)</h2>
+        <h3 class="text-2xl font-bold text-center text-white mb-5">โหวตได้ตั้งแต่วันนี้ - 20 กุมภาพันธ์ 2568</h3>
+        <h3 class="text-2xl font-bold text-center text-white mb-5"> :: 1 คน โหวตได้รายการละ 3 ครั้ง ::</h3>
+        <!-- หมวดหมู่ 1 -->
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold text-center text-white mb-4">💖 RD มีน้ำใจ 💖</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                
+                <!-- ผู้เข้าชิง 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/3/ธีร์3-3.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ธีร์วิสิทธิ์ กอนรัมย์</h4>
+                    <p class="text-gray-600">ธีร์ - ม.3/3</p>
+                    <button onclick="vote('RD มีน้ำใจ', 'ธีร์วิสิทธิ์ กอนรัมย์')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>
+
+                <!-- ผู้เข้าชิง 2 -->
+<div class="bg-white rounded-lg shadow-lg p-6 text-center">
+    <!-- ใส่รูป -->
+    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+        <img src="photos/3/คิว 3-3.jpg" alt="User Image" class="w-full h-full object-cover">
+    </div>
+    <h4 class="text-lg font-bold text-blue-600">วรเศรษฐ์ ภู่กัน</h4>
+    <p class="text-gray-600">คิว - ม.3/3</p>
+    <button onclick="vote('RD มีน้ำใจ', 'วรเศรษฐ์ ภู่กัน')" 
+        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+        โหวต
+    </button>
+</div>
+                <!-- ผู้เข้าชิง 3 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/3/ป่าน 3-6.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">วรินทร์ทิพย์ ตาปนานนท์</h4>
+                    <p class="text-gray-600">ป่าน - ม.3/6</p>
+                    <button onclick="vote('RD มีน้ำใจ', 'วรินทร์ทิพย์ ตาปนานนท์')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>
+                                <!-- ผู้เข้าชิง 4 -->
+<div class="bg-white rounded-lg shadow-lg p-6 text-center">
+    <!-- ใส่รูป -->
+    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+        <img src="photos/6/ไข่เจียว 6-3.jpg" alt="User Image" class="w-full h-full object-cover">
+    </div>
+    <h4 class="text-lg font-bold text-blue-600">พิสิทธิ์ ศรีธร</h4>
+    <p class="text-gray-600">ไข่เจียว - ม.6/3</p>
+    <button onclick="vote('RD มีน้ำใจ', 'พิสิทธิ์ ศรีธร')" 
+        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+        โหวต
+    </button>
+</div>
+                                <!-- ผู้เข้าชิง 5 -->
+                                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                                    <!-- ใส่รูป -->
+                                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                                        <img src="photos/6/หมู 6-7.jpg" alt="User Image" class="w-full h-full object-cover">
+                                    </div>
+                                    <h4 class="text-lg font-bold text-blue-600">ธัญเทพ ขําดี</h4>
+                                    <p class="text-gray-600">หมู - ม.6/7</p>
+                                    <button onclick="vote('RD มีน้ำใจ', 'ธัญเทพ ขําดี')" 
+                                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                                        โหวต
+                                    </button>
+                                </div>
+                                <!-- ผู้เข้าชิง 6 -->
+                                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                                    <!-- ใส่รูป -->
+                                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                                        <img src="photos/6/หรั่ง 6-8.jpg" alt="User Image" class="w-full h-full object-cover">
+                                    </div>
+                                    <h4 class="text-lg font-bold text-blue-600">ธีระเทพ พิพัฒน์</h4>
+                                    <p class="text-gray-600">หรั่ง - ม.6/8</p>
+                                    <button onclick="vote('RD มีน้ำใจ', 'ธีระเทพ พิพัฒน์')" 
+                                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                                        โหวต
+                                    </button>
+                                </div>
+</div>
+</div>
+       <!-- หมวดหมู่ 2 -->
+       <div class="mb-8">
+        <h3 class="text-2xl font-semibold text-center text-white mb-4">🤵 มารยาทดีที่สุด 🤵</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            
+            <!-- ผู้เข้าชิง 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <!-- ใส่รูป -->
+                <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                    <img src="photos/3/ป่าน 3-6.jpg" alt="User Image" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-lg font-bold text-blue-600">วรินทร์ทิพย์ ตาปนานนท์</h4>
+                <p class="text-gray-600">ป่าน - ม.3/6</p>
+                <button onclick="vote('มารยาทดีที่สุด', 'วรินทร์ทิพย์ ตาปนานนท์')" 
+                    class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                    โหวต
+                </button>
+            </div>
+
+            <!-- ผู้เข้าชิง 2 -->
+<div class="bg-white rounded-lg shadow-lg p-6 text-center">
+<!-- ใส่รูป -->
+<div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+    <img src="photos/6/ซี 6-1.jpg" alt="User Image" class="w-full h-full object-cover">
+</div>
+<h4 class="text-lg font-bold text-blue-600">ชัยพิพัฒน์ พุดสีเสน</h4>
+<p class="text-gray-600">ซี - ม.6/1</p>
+<button onclick="vote('มารยาทดีที่สุด', 'ชัยพิพัฒน์ พุดสีเสน')" 
+    class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+    โหวต
+</button>
+</div>
+            <!-- ผู้เข้าชิง 3 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <!-- ใส่รูป -->
+                <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                    <img src="photos/6/พลอย 6-4.jpeg" alt="User Image" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-lg font-bold text-blue-600">ณัฐชา ยอดผา</h4>
+                <p class="text-gray-600">พลอย - ม.6/4</p>
+                <button onclick="vote('มารยาทดีที่สุด', 'ณัฐชา ยอดผา')" 
+                    class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                    โหวต
+                </button>
+                </div>
+                 <!-- ผู้เข้าชิง 4 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <!-- ใส่รูป -->
+                <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                    <img src="photos/6/ตือ 6-7.jpg" alt="User Image" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-lg font-bold text-blue-600">กุลกิตติ์ สุขสำราญ</h4>
+                <p class="text-gray-600">ตือ - ม.6/7</p>
+                <button onclick="vote('มารยาทดีที่สุด', 'กุลกิตติ์ สุขสำราญ')" 
+                    class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                    โหวต
+                </button>
+                </div>
+            </div>
+        </div>
+       <!-- หมวดหมู่ 3 -->
+       <div class="mb-8">
+        <h3 class="text-2xl font-semibold text-center text-white mb-4">📸 ขวัญใจช่างภาพ 📸</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            
+            <!-- ผู้เข้าชิง 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <!-- ใส่รูป -->
+                <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                    <img src="photos/3/เพรช 3-12.jpg" alt="User Image" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-lg font-bold text-blue-600">แทนไท จันทร์เหลือง</h4>
+                <p class="text-gray-600">เพรส - ม.3/12</p>
+                <button onclick="vote('ขวัญใจช่างภาพ', 'แทนไท จันทร์เหลือง')" 
+                    class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                    โหวต
+                </button>
+            </div>
+            <!-- ผู้เข้าชิง 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <!-- ใส่รูป -->
+                <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                    <img src="photos/6/เก้า 6-1.jpg" alt="User Image" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-lg font-bold text-blue-600">ชนกันต์ ส่งแสง</h4>
+                <p class="text-gray-600">เก้า - ม.6/1</p>
+                <button onclick="vote('ขวัญใจช่างภาพ', 'ชนกันต์ ส่งแสง')" 
+                    class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                    โหวต
+                </button>
+            </div>
+            <!-- ผู้เข้าชิง 3 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <!-- ใส่รูป -->
+                <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                    <img src="photos/6/พอร์ช 6-3.jpg" alt="User Image" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-lg font-bold text-blue-600">มหัทธน กรอบรูป</h4>
+                <p class="text-gray-600">พอร์ช - ม.6/3</p>
+                <button onclick="vote('ขวัญใจช่างภาพ', 'มหัทธน กรอบรูป')" 
+                    class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                    โหวต
+                </button>
+            </div>
+            <!-- ผู้เข้าชิง 4 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <!-- ใส่รูป -->
+                <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                    <img src="photos/6/แก้ว 6-5.jpg" alt="User Image" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-lg font-bold text-blue-600">กัญญาภัทร เต็มใจ</h4>
+                <p class="text-gray-600">แก้ว - ม.6/5</p>
+                <button onclick="vote('ขวัญใจช่างภาพ', 'กัญญาภัทร เต็มใจ')" 
+                    class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                    โหวต
+                </button>
+            </div>
+            <!-- ผู้เข้าชิง 5 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <!-- ใส่รูป -->
+                <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                    <img src="photos/6/ป๋อม 6-7.jpg" alt="User Image" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-lg font-bold text-blue-600">อชิรญา มาตราช</h4>
+                <p class="text-gray-600">ป๋อม - ม.6/7</p>
+                <button onclick="vote('ขวัญใจช่างภาพ', 'อชิรญา มาตราช')" 
+                    class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                    โหวต
+                </button>
+            </div>
+            <!-- ผู้เข้าชิง 6 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <!-- ใส่รูป -->
+                <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                    <img src="photos/6/เพลง 6-9.jpg" alt="User Image" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-lg font-bold text-blue-600">กัลยกร เหลืองวิชัยสกุล</h4>
+                <p class="text-gray-600">เพลง - ม.6/9</p>
+                <button onclick="vote('ขวัญใจช่างภาพ', 'กัลยกร เหลืองวิชัยสกุล')" 
+                    class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                    โหวต
+                </button>
+            </div>
+        </div>
+        </div>
+        <!-- หมวดหมู่ 4 -->
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold text-center text-white mb-4">🎤 นักร้องประจำรุ่น 🎤</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                
+                <!-- ผู้เข้าชิง 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/3/ครีม 3-5.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">จุฑาธิป จันทร์ทองหลาง</h4>
+                    <p class="text-gray-600">ครีม - ม.3/5</p>
+                    <button onclick="vote('นักร้องประจำรุ่น', 'จุฑาธิป จันทร์ทองหลาง')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>
+                <!-- ผู้เข้าชิง 2 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/นุ่น 6-6.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ฐาปนีย์ เชี่ยวอากาศยาน</h4>
+                    <p class="text-gray-600">นุ่น - ม.6/6</p>
+                    <button onclick="vote('นักร้องประจำรุ่น', 'ฐาปนีย์ เชี่ยวอากาศยาน')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- หมวดหมู่ 5 -->
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold text-center text-white mb-4">🌟 ขวัญใจรุ่น 🌟</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                
+                <!-- ผู้เข้าชิง 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/3/มังกร 3-1.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">กรมิษฐ์ สุบิน</h4>
+                    <p class="text-gray-600">มังกร - ม.3/1</p>
+                    <button onclick="vote('ขวัญใจรุ่น', 'กรมิษฐ์ สุบิน')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>  
+                <!-- ผู้เข้าชิง 2 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/3/ซัน 3-1.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">พสุธา โถเพียทา</h4>
+                    <p class="text-gray-600">ซัน - ม.3/1</p>
+                    <button onclick="vote('ขวัญใจรุ่น', 'พสุธา โถเพียทา')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>  
+                <!-- ผู้เข้าชิง 3 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/ฟลุ๊ค 6-1.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">รัฐศาสตร์ เดือนแจ้งรัมย์</h4>
+                    <p class="text-gray-600">ฟลุ๊ค - ม.6/1</p>
+                    <button onclick="vote('ขวัญใจรุ่น', 'รัฐศักดิ์ เดือนแจ้งรัมย์')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div> 
+                <!-- ผู้เข้าชิง 4 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/ผักบุ้ง 6-2.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">มณีรัตน์ ชาวโยธา</h4>
+                    <p class="text-gray-600">ผักบุ้ง - ม.6/2</p>
+                    <button onclick="vote('ขวัญใจรุ่น', 'มณีรัตน์ ชาวโยธา')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div> 
+                <!-- ผู้เข้าชิง 5 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/น้ำ 6-3.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ศิรินทิพย์ ศรีวิชัยวงค์</h4>
+                    <p class="text-gray-600">น้ำ - ม.6/3</p>
+                    <button onclick="vote('ขวัญใจรุ่น', 'ศิรินทิพย์ ศรีวิชัยวงค์')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div> 
+                <!-- ผู้เข้าชิง 6 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/อิม 6-4.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ปิยาภัสร์ ธรรมเสนี</h4>
+                    <p class="text-gray-600">อิม - ม.6/4</p>
+                    <button onclick="vote('ขวัญใจรุ่น', 'ปิยาภัสร์ ธรรมเสนี')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div> 
+                <!-- ผู้เข้าชิง 7 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/แก้ว 6-5.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">กัญญาภัทร เต็มใจ</h4>
+                    <p class="text-gray-600">แก้ว - ม.6/5</p>
+                    <button onclick="vote('ขวัญใจรุ่น', 'กัญญาภัทร เต็มใจ')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div> 
+                <!-- ผู้เข้าชิง 8 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/น้ำมนต์ 6-9.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">กมลพร วิทยะอักษร</h4>
+                    <p class="text-gray-600">น้ำมนต์ - ม.6/9</p>
+                    <button onclick="vote('ขวัญใจรุ่น', 'กมลพร วิทยะอักษร')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div> 
+            </div>
+        </div>
+        <!-- หมวดหมู่ 6 -->
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold text-center text-white mb-4">💪 ตัวตึงของรุ่น 💪</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">           
+                <!-- ผู้เข้าชิง 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/3/อันดา 3-3.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">พชร สุวรรณเพ็ชร</h4>
+                    <p class="text-gray-600">อันดา - ม.3/3</p>
+                    <button onclick="vote('ตัวตึงของรุ่น', 'พชร สุวรรณเพ็ชร')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>           
+                <!-- ผู้เข้าชิง 2 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/3/บัส 3-6.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ขวัญเนตร ไร่สงวน</h4>
+                    <p class="text-gray-600">บัส - ม.3/6</p>
+                    <button onclick="vote('ตัวตึงของรุ่น', 'ขวัญเนตร ไร่สงวน')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div> 
+                <!-- ผู้เข้าชิง 3 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/ยูริ 6-1.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ญัฐวดี แสงรุ้ง</h4>
+                    <p class="text-gray-600">ยูริ - ม.6/1</p>
+                    <button onclick="vote('ตัวตึงของรุ่น', 'ญัฐวดี แสงรุ้ง')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div> 
+                <!-- ผู้เข้าชิง 4 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/โอม 6-2.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ปวริศ ปากหวาน</h4>
+                    <p class="text-gray-600">โอม - ม.6/2</p>
+                    <button onclick="vote('ตัวตึงของรุ่น', 'ปวริศ ปากหวาน')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div> 
+                <!-- ผู้เข้าชิง 5 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/น้ำ 6-3.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ศิรินทิพย์ ศรีวิชัยวงค์</h4>
+                    <p class="text-gray-600">น้ำ - ม.6/3</p>
+                    <button onclick="vote('ตัวตึงของรุ่น', 'ศิรินทิพย์ ศรีวิชัยวงค์')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div> 
+                <!-- ผู้เข้าชิง 6 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/อิม 6-4.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ปิยาภัสร์ ธรรมเสนี</h4>
+                    <p class="text-gray-600">อิม - ม.6/4</p>
+                    <button onclick="vote('ตัวตึงของรุ่น', 'ปิยาภัสร์ ธรรมเสนี')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div> 
+                <!-- ผู้เข้าชิง 7 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/ติ๊กต่อก 6-5.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">จิรภัทร ยุ่นประยงค์</h4>
+                    <p class="text-gray-600">ติ๊กต่อก - ม.6/5</p>
+                    <button onclick="vote('ตัวตึงของรุ่น', 'จิรภัทร ยุ่นประยงค์')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div> 
+                <!-- ผู้เข้าชิง 8 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/คิม 6-6.jpeg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">สิริพัฒน์ เนรตภักดี</h4>
+                    <p class="text-gray-600">คิม - ม.6/6</p>
+                    <button onclick="vote('ตัวตึงของรุ่น', 'สิริพัฒน์ เนรตภักดี')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div> 
+                <!-- ผู้เข้าชิง 9 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/หมู 6-7.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ธัญเทพ ขำดี</h4>
+                    <p class="text-gray-600">หมู - ม.6/7</p>
+                    <button onclick="vote('ตัวตึงของรุ่น', 'ธัญเทพ ขำดี')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div> 
+                <!-- ผู้เข้าชิง 10 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/จ๊ะจ๋า 6-9.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ปราณปริยา จันต๊ะ</h4>
+                    <p class="text-gray-600">จ๊ะจ๋า - ม.6/9</p>
+                    <button onclick="vote('ตัวตึงของรุ่น', 'ปราณปริยา จันต๊ะ')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div> 
+            </div>
+        </div>
+
+        <!-- หมวดหมู่ 7 -->
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold text-center text-white mb-4">🔥 ฮอตสุดของรุ่น 🔥</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">           
+                <!-- ผู้เข้าชิง 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/3/นาย 3-1.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ภูเบศ เฉลิมเจริญกุล</h4>
+                    <p class="text-gray-600">นาย - ม.3/1</p>
+                    <button onclick="vote('ฮอตสุดของรุ่น', 'ภูเบศ เฉลิมเจริญกุล')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div> 
+                <!-- ผู้เข้าชิง 2 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/3/ไก่ 3-3.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ภาคภูมิ โนนทะขันธ์</h4>
+                    <p class="text-gray-600">ไก่ - ม.3/3</p>
+                    <button onclick="vote('ฮอตสุดของรุ่น', 'ภาคภูมิ โนนทะขันธ์')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>                  
+                <!-- ผู้เข้าชิง 3 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/หมู 6-7.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ธัญเทพ ขำดี</h4>
+                    <p class="text-gray-600">หมู - ม.6/7</p>
+                    <button onclick="vote('ฮอตสุดของรุ่น', 'ธัญเทพ ขำดี')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>  
+                <!-- ผู้เข้าชิง 4 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/ป๋อม 6-7.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">อชิรญา มาตราช</h4>
+                    <p class="text-gray-600">ป๋อม - ม.6/7</p>
+                    <button onclick="vote('ฮอตสุดของรุ่น', 'อชิรญา มาตราช')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div> 
+                <!-- ผู้เข้าชิง 5 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/มิว 6-8.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">รัตนวัลย์ สัมพันธ์แพ</h4>
+                    <p class="text-gray-600">มิว - ม.6/8</p>
+                    <button onclick="vote('ฮอตสุดของรุ่น', 'รัตนวัลย์ สัมพันธ์แพ')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div> 
+                <!-- ผู้เข้าชิง 6 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/เพลง 6-9.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">กัลยกร เหลืองวิชัยสกุล</h4>
+                    <p class="text-gray-600">เพลง - ม.6/9</p>
+                    <button onclick="vote('ฮอตสุดของรุ่น', 'กัลยกร เหลืองวิชัยสกุล')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div> 
+            </div>
+        </div>
+        <!-- หมวดหมู่ 8 -->
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold text-center text-white mb-4">🚀 พีคสุดในรุ่น 🚀</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">           
+                <!-- ผู้เข้าชิง 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/3/เบส 3-6.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">วรัญญู พวงสมบัติ</h4>
+                    <p class="text-gray-600">เบส - ม.3/6</p>
+                    <button onclick="vote('พีคสุดในรุ่น', 'วรัญญู พวงสมบัติ')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div> 
+                <!-- ผู้เข้าชิง 2 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/มิลค์​ 6-1.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">วรรญา วรรณผ่อง</h4>
+                    <p class="text-gray-600">มิล์ค - ม.6/1</p>
+                    <button onclick="vote('พีคสุดในรุ่น', 'วรรญา วรรณผ่อง')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>
+                <!-- ผู้เข้าชิง 3 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/อิม 6-4.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ปิยาภัสร์ ธรรมเสนี</h4>
+                    <p class="text-gray-600">อิม - ม.6/4</p>
+                    <button onclick="vote('พีคสุดในรุ่น', 'ปิยาภัสร์ ธรรมเสนี')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>
+                <!-- ผู้เข้าชิง 4 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/นิว 6-9.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ภูเมธ โอภาสชัยทัศ</h4>
+                    <p class="text-gray-600">นิว - ม.6/9</p>
+                    <button onclick="vote('พีคสุดในรุ่น', 'ภูเมธ โอภาสชัยทัศ')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- หมวดหมู่ 9 -->
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold text-center text-white mb-4">⚽ กีฬาดี กีฬาเด่น เน้นกีฬา ⚽</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">           
+                <!-- ผู้เข้าชิง 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/3/มนต์ 3-3.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ภัทรกร ตรีศาสตร์</h4>
+                    <p class="text-gray-600">มนต์ - ม.3/3</p>
+                    <button onclick="vote('กีฬาดี กีฬาเด่น เน้นกีฬา', 'ภัทรกร ตรีศาสตร์')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>        
+                <!-- ผู้เข้าชิง 2 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/มิลค์​ 6-1.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">วรรรญา วรรณผ่อง</h4>
+                    <p class="text-gray-600">มิล์ค - ม.6/1</p>
+                    <button onclick="vote('กีฬาดี กีฬาเด่น เน้นกีฬา', 'วรรรญา วรรณผ่อง')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>  
+                <!-- ผู้เข้าชิง 3 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/โม 6-3.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">จารุภัทร พิณแย่ง</h4>
+                    <p class="text-gray-600">โม - ม.6/3</p>
+                    <button onclick="vote('กีฬาดี กีฬาเด่น เน้นกีฬา', 'จารุภัทร พิณแย่ง')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>
+                <!-- ผู้เข้าชิง 4 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/ตองก้า 6-8.jpeg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ปฏิภาณ ทองเผือก</h4>
+                    <p class="text-gray-600">ตองก้า - ม.6/8</p>
+                    <button onclick="vote('กีฬาดี กีฬาเด่น เน้นกีฬา', 'ปฏิภาณ ทองเผือก')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- หมวดหมู่ 10 -->
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold text-center text-white mb-4">🚨 ขวัญใจห้องปกครอง 🚨</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">           
+                <!-- ผู้เข้าชิง 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/3/คูณ 3-10.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ชัยมงคล บุราณ</h4>
+                    <p class="text-gray-600">คูน - ม.3/10</p>
+                    <button onclick="vote('ขวัญใจห้องปกครอง', 'ชัยมงคล บุราณ')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div> 
+                <!-- ผู้เข้าชิง 2 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/3/เมย์ 3-12.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">พรนิภา จันทะภา</h4>
+                    <p class="text-gray-600">เมย์ - ม.3/12</p>
+                    <button onclick="vote('ขวัญใจห้องปกครอง', 'พรนิภา จันทะภา')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>         
+                <!-- ผู้เข้าชิง 3 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/3/เฟิร์น 3-3.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">กานติมา เกิดสิน</h4>
+                    <p class="text-gray-600">เฟิร์น - ม.3/3</p>
+                    <button onclick="vote('ขวัญใจห้องปกครอง', 'กานติมา เกิดสิน')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>   
+                <!-- ผู้เข้าชิง 4 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/ผักบุ้ง 6-2.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">มณีรัตน์ ชาวโยธา</h4>
+                    <p class="text-gray-600">ผักบุ้ง - ม.6/2</p>
+                    <button onclick="vote('ขวัญใจห้องปกครอง', 'มณีรัตน์ ชาวโยธา')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>  
+                <!-- ผู้เข้าชิง 5 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/ขลุ่ย 6-3.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">จิรภัทร จินดาภาคย์</h4>
+                    <p class="text-gray-600">ขลุ่ย - ม.6/3</p>
+                    <button onclick="vote('ขวัญใจห้องปกครอง', 'จิรภัทร จินดาภาคย์')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>
+                <!-- ผู้เข้าชิง 6 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/อิม 6-4.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ปิยาภัสร์ ธรรมเสนี</h4>
+                    <p class="text-gray-600">อิม - ม.6/4</p>
+                    <button onclick="vote('ขวัญใจห้องปกครอง', 'ปิยาภัสร์ ธรรมเสนี')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>
+                <!-- ผู้เข้าชิง 7 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/ป้อง 6-4.jpeg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">รชานันท์ ติสันเทียะ</h4>
+                    <p class="text-gray-600">ป้อง - ม.6/4</p>
+                    <button onclick="vote('ขวัญใจห้องปกครอง', 'รชานันท์ ติสันเทียะ')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>
+                <!-- ผู้เข้าชิง 8 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/แก้ว 6-5.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">กัญญาภัทร เต็มใจ</h4>
+                    <p class="text-gray-600">แก้ว - ม.6/5</p>
+                    <button onclick="vote('ขวัญใจห้องปกครอง', 'กัญญาภัทร เต็มใจ')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- หมวดหมู่ 11 -->
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold text-center text-white mb-4">🍔 นิ่งเป็นหลับ ขยับเป็นกิน 🍔</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">           
+                <!-- ผู้เข้าชิง 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/3/เพ็ชร 3-1.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ศิริพงษ์ โพธิ์คำเเสนโคตร</h4>
+                    <p class="text-gray-600">เพ็ชร - ม.3/1</p>
+                    <button onclick="vote('นิ่งเป็นหลับ ขยับเป็นกิน', 'ศิริพงษ์ โพธิ์คำเเสนโคตร')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>         
+                <!-- ผู้เข้าชิง 2 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/3/น้ำชา 3-5.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">รมิตา มะปรางศรี</h4>
+                    <p class="text-gray-600">นํ้าชา - ม.3/5</p>
+                    <button onclick="vote('นิ่งเป็นหลับ ขยับเป็นกิน', 'รมิตา มะปรางศรี')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>   
+                <!-- ผู้เข้าชิง 3 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/3/บัส 3-6.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ขวัญเนตร ไร่สงวน</h4>
+                    <p class="text-gray-600">บัส - ม.3/6</p>
+                    <button onclick="vote('นิ่งเป็นหลับ ขยับเป็นกิน', 'ขวัญเนตร ไร่สงวน')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>
+                <!-- ผู้เข้าชิง 4 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/เซฟ 6-4.jpeg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">สิรธีร์ สากลวารี</h4>
+                    <p class="text-gray-600">เซฟ - ม.6/4</p>
+                    <button onclick="vote('นิ่งเป็นหลับ ขยับเป็นกิน', 'สิรธีร์ สากลวารี')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>
+                <!-- ผู้เข้าชิง 5 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/แพน 6-4.jpeg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ปรัชญาวรรณ ไชยสงค์</h4>
+                    <p class="text-gray-600">เเพน - ม.6/4</p>
+                    <button onclick="vote('นิ่งเป็นหลับ ขยับเป็นกิน', 'ปรัชญาวรรณ ไชยสงค์')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>
+                <!-- ผู้เข้าชิง 6 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/เอ 6-4.jpeg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">พนาลัย สุก๋า</h4>
+                    <p class="text-gray-600">เอ - ม.6/4</p>
+                    <button onclick="vote('นิ่งเป็นหลับ ขยับเป็นกิน', 'พนาลัย สุก๋า')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>
+                <!-- ผู้เข้าชิง 7 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/ณิชา 6-6.png" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ณิชาภัทร สุขสวัสดิ์</h4>
+                    <p class="text-gray-600">ณิชา - ม.6/6</p>
+                    <button onclick="vote('นิ่งเป็นหลับ ขยับเป็นกิน', 'ณิชาภัทร สุขสวัสดิ์')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>
+                <!-- ผู้เข้าชิง 8 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/หมู 6-7.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ธัญเทพ ขำดี</h4>
+                    <p class="text-gray-600">หมู - ม.6/7</p>
+                    <button onclick="vote('นิ่งเป็นหลับ ขยับเป็นกิน', 'ธัญเทพ ขำดี')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>
+                </div> 
+                </div>
+        <!-- หมวดหมู่ 12 -->
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold text-center text-white mb-4">😴 หลับทุกคาบ ไม่ทราบอะไรเลย 😴</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">           
+                <!-- ผู้เข้าชิง 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/3/แชมป์ 3-2.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ณภัทร สาครินทร์</h4>
+                    <p class="text-gray-600">แชมป์ - ม.3/2</p>
+                    <button onclick="vote('หลับทุกคาบ ไม่ทราบอะไรเลย', 'ณภัทร สาครินทร์')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>                
+                <!-- ผู้เข้าชิง 2 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/3/กัญญารัตน์ 3-4.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">กัญญารัตน์ วรรณพิรุญ</h4>
+                    <p class="text-gray-600">กัญญารัตน์ - ม.3/4</p>
+                    <button onclick="vote('หลับทุกคาบ ไม่ทราบอะไรเลย', 'กัญญารัตน์ วรรณพิรุญ')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>    
+                <!-- ผู้เข้าชิง 3 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/ใบเพชร 6-2.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">วงศกร กาชัย</h4>
+                    <p class="text-gray-600">ใบเพชร - ม.6/2</p>
+                    <button onclick="vote('หลับทุกคาบ ไม่ทราบอะไรเลย', 'วงศกร กาชัย')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>    
+                <!-- ผู้เข้าชิง 4 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/เซฟ 6-4.jpeg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">สิรธีร์ สากลวารี</h4>
+                    <p class="text-gray-600">เซฟ - ม.6/4</p>
+                    <button onclick="vote('หลับทุกคาบ ไม่ทราบอะไรเลย', 'สิรธีร์ สากลวารี')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>    
+                <!-- ผู้เข้าชิง 5 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/แก้ว 6-5.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">กัญญาภัทร เต็มใจ</h4>
+                    <p class="text-gray-600">แก้ว - ม.6/5</p>
+                    <button onclick="vote('หลับทุกคาบ ไม่ทราบอะไรเลย', 'กัญญาภัทร เต็มใจ')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>
+                <!-- ผู้เข้าชิง 6 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/นินิว 6-4.jpeg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">จิราภา สาเคดา</h4>
+                    <p class="text-gray-600">นินิว - ม.6/7</p>
+                    <button onclick="vote('หลับทุกคาบ ไม่ทราบอะไรเลย', 'จิราภา สาเคดา')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>
+                <!-- ผู้เข้าชิง 7 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/ไอซ์ 6-7.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ธนกฤต แก้วไทย</h4>
+                    <p class="text-gray-600">ไอซ์ - ม.6/7</p>
+                    <button onclick="vote('หลับทุกคาบ ไม่ทราบอะไรเลย', 'ธนกฤต แก้วไทย')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- หมวดหมู่ 13 -->
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold text-center text-white mb-4">💅 ตัวแม่ ตัวมัม 💅</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">           
+                <!-- ผู้เข้าชิง 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/3/เติ้ล 3-4.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">วรพล มูหะหมัดตาเฮต</h4>
+                    <p class="text-gray-600">เติ้ล - ม.3/4</p>
+                    <button onclick="vote('ตัวแม่ ตัวมัม', 'วรพล มูหะหมัดตาเฮต')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>  
+                <!-- ผู้เข้าชิง 2 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/3/โฟร์ท 3-5.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ธารีญา ตันตยานนท์</h4>
+                    <p class="text-gray-600">โฟร์ท - ม.3/5</p>
+                    <button onclick="vote('ตัวแม่ ตัวมัม', 'ธารีญา ตันตยานนท์')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>  
+                <!-- ผู้เข้าชิง 3 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/3/บัส 3-6.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ขวัญเนตร ไร่สงวน</h4>
+                    <p class="text-gray-600">บัส - ม.3/6</p>
+                    <button onclick="vote('ตัวแม่ ตัวมัม', 'ขวัญเนตร ไร่สงวน')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>  
+                <!-- ผู้เข้าชิง 4 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/ผักบุ้ง 6-2.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">มณีรัตน์ ชาวโยธา</h4>
+                    <p class="text-gray-600">ผักบุ้ง - ม.6/2</p>
+                    <button onclick="vote('ตัวแม่ ตัวมัม', 'มณีรัตน์ ชาวโยธา')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>  
+                <!-- ผู้เข้าชิง 5 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <!-- ใส่รูป -->
+                    <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                        <img src="photos/6/น้ำ 6-3.jpg" alt="User Image" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold text-blue-600">ศิรินทิพย์ ศรีวิชัยวงค์</h4>
+                    <p class="text-gray-600">น้ำ - ม.6/3</p>
+                    <button onclick="vote('ตัวแม่ ตัวมัม', 'ศิรินทิพย์ ศรีวิชัยวงค์')" 
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                        โหวต
+                    </button>
+                </div>  
+               <!-- ผู้เข้าชิง 6 -->
+               <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <!-- ใส่รูป -->
+                <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                    <img src="photos/6/ปัญ 6-3.jpg" alt="User Image" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-lg font-bold text-blue-600">จิรฐา ยุทธภัณฑ์ดำรง</h4>
+                <p class="text-gray-600">ปัญ - ม.6/3</p>
+                <button onclick="vote('ตัวแม่ ตัวมัม', 'จิรฐา ยุทธภัณฑ์ดำรง')" 
+                    class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                    โหวต
+                </button>
+            </div>  
+               <!-- ผู้เข้าชิง 7 -->
+               <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <!-- ใส่รูป -->
+                <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                    <img src="photos/6/ป้อง 6-4.jpeg" alt="User Image" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-lg font-bold text-blue-600">รชานันท์ ติสันเทียะ</h4>
+                <p class="text-gray-600">ป้อง - ม.6/4</p>
+                <button onclick="vote('ตัวแม่ ตัวมัม', 'รชานันท์ ติสันเทียะ')" 
+                    class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                    โหวต
+                </button>
+            </div> 
+               <!-- ผู้เข้าชิง 8 -->
+               <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <!-- ใส่รูป -->
+                <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                    <img src="photos/6/ต้นข้าว 6-5.jpg" alt="User Image" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-lg font-bold text-blue-600">สุทธดา กุมผัน</h4>
+                <p class="text-gray-600">ต้นข้าว - ม.6/5</p>
+                <button onclick="vote('ตัวแม่ ตัวมัม', 'สุทธดา กุมผัน')" 
+                    class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                    โหวต
+                </button>
+            </div> 
+               <!-- ผู้เข้าชิง 9 -->
+               <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <!-- ใส่รูป -->
+                <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-3 overflow-hidden">
+                    <img src="photos/6/นัทตี้ 6-9.jpg" alt="User Image" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-lg font-bold text-blue-600">ณัฐพล แสงรุ้ง</h4>
+                <p class="text-gray-600">นัตตี้ - ม.6/9</p>
+                <button onclick="vote('ตัวแม่ ตัวมัม', 'ณัฐพล แสงรุ้ง')" 
+                    class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mt-3">
+                    โหวต
+                </button>
+            </div> 
+        </div> 
+    </div> 
+    </div>
+
+<!-- Popup กำลังโหวต -->
+<div id="votingPopup" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden">
+    <div class="bg-white p-6 rounded-lg shadow-lg text-center fade-in">
+        <p class="text-lg font-semibold">กำลังโหวต...</p>
+    </div>
+</div>
+
+    <script>
+        const scriptURL = "https://script.google.com/macros/s/AKfycbxZ2zOhnfZ2USZuJEx8FQNa0_egi8YNqrbC0Db6wt3HqX5HJD7hX4P6i9Gm5BtGnBwH5A/exec"; // ใส่ URL ของ Google Apps Script
+
+        function login() {
+            let studentId = document.getElementById("studentId").value;
+            if (!studentId) {
+                alert("กรุณากรอกรหัสนักเรียน");
+                return;
+            }
+
+            document.getElementById("loadingPopup").classList.remove("hidden");
+
+            setTimeout(() => {
+                fetch(scriptURL, {
+                    method: "POST",
+                    body: new URLSearchParams({ action: "login", studentId: studentId }),
+                })
+                .then(response => response.text())
+                .then(result => {
+                    document.getElementById("loadingPopup").classList.add("hidden");
+                    if (result === "success") {
+                        sessionStorage.setItem("studentId", studentId);
+                        document.getElementById("loginPage").classList.add("hidden");
+                        document.getElementById("votePage").classList.remove("hidden");
+                    } else {
+                        alert("รหัสผิดพลาด!");
+                    }
+                });
+            }, 2000); // ดีเลย์ 2 วินาที
+        }
+
+        function vote(category, nominee) {
+    let studentId = sessionStorage.getItem("studentId");
+    if (!studentId) {
+        alert("กรุณาเข้าสู่ระบบก่อน");
+        return;
+    }
+
+    // เปิด Popup กำลังโหวต
+    document.getElementById("votingPopup").classList.remove("hidden");
+
+    fetch(scriptURL, {
+        method: "POST",
+        body: new URLSearchParams({ 
+            action: "vote", 
+            studentId: studentId, 
+            category: category, 
+            nominee: nominee 
+        }),
+    })
+    .then(response => response.text())
+    .then(result => {
+        // ปิด Popup กำลังโหวต
+        document.getElementById("votingPopup").classList.add("hidden");
+
+        if (result === "already_voted") {
+            showAlert("คุณโหวตครบ 2 คนในหมวดนี้แล้ว!");
+        } else {
+            showAlert("โหวตสำเร็จ!");
+        }
+    });
+}
+
+        function showAlert(message) {
+            document.getElementById("alertMessage").textContent = message;
+            document.getElementById("alertPopup").classList.remove("hidden");
+        }
+
+        function closePopup() {
+            document.getElementById("alertPopup").classList.add("hidden");
+        }
+    </script>
+
+</body>
+</html>
